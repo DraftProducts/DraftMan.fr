@@ -1,55 +1,74 @@
 <template>
   <div>
-    <nuxt />
+    <Header />
+    <nuxt class="container" />
+    <Footer />
   </div>
 </template>
 
+<script>
+
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+
+export default {
+    components: {
+        Header,
+        Footer
+    }
+}
+</script>
+
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+
+* {
   box-sizing: border-box;
+  font-family: "Open Sans", "Arial Narrow", Arial, sans-serif;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+@font-face {
+  font-family: "Uni Sans";
+  src: local("Uni Sans Heavy"), local("UniSansHeavy"),
+    url("../assets/fonts/UniSans.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+.container{
+    min-height: calc(100vh - 365px);
+}
+
+a.link {
+  position: relative;
   text-decoration: none;
-  padding: 10px 30px;
+  color: #cd6e57;
+  -webkit-transition: color .15s ease-in;
+  -moz-transition: color .15s ease-in;
+  -o-transition: color .15s ease-in;
+  transition: color .15s ease-in;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+a.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #cd6e57;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  -webkit-transform: translateX(-50%) scaleX(0);
+  transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+a.link:hover::after {
+  text-transform: none;
+  -webkit-transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
 </style>
