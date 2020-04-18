@@ -1,0 +1,16 @@
+{
+    "root": true,
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "sourceType": "module"
+    },
+    "extends": [
+      "@nuxtjs"
+    ],
+    "rules": {
+      "vue/no-v-html": "off",
+      "curly": [2, "multi-line"],
+      "indent": ["warn", 4],
+      "vue/attribute-hyphenation": ["error", "never"]
+    }
+  }
