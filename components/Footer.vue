@@ -9,13 +9,10 @@
         <router-link to="/a-propos" title="À Propos">
           À Propos
         </router-link>
-        <router-link to="/portfolio" title="Portfolio">
-          Portfolio
+        <router-link to="/experiences" title="Experiences">
+          Experiences
         </router-link>
         <a href="https://www.draftbot.fr" title="DraftBot">DraftBot</a>
-        <router-link to="/contact" title="Contact">
-          Contact
-        </router-link>
       </div>
       <div class="column">
         <h4>Contact</h4>
@@ -34,7 +31,7 @@
       </div>
     </div>
     <div id="copyright">
-      <section>Copyright 2016 - 2019 &copy; - All rights reserved</section><span class="sep"> - </span><section>Développé avec <span class="coeur">❤</span> par DraftMan</section>
+      <section>Copyright 2016 - 2020 &copy; - All rights reserved</section>
     </div>
   </footer>
 </template>
@@ -60,6 +57,9 @@ footer {
         display: flex;
         max-width: 1250px;
         width: 100%;
+        @media only screen and (max-width: $phone) {
+            flex-direction: column;
+        }
         .column{
             display: flex;
             flex-direction: column;
