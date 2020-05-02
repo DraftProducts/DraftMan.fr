@@ -15,24 +15,27 @@
     "*.{js,vue}": "yarn lint",
     "*.{css,vue}": "stylelint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/redirect-module": "^0.3.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "nuxt-svg-loader": "^1.2.0",
+    "parallax-js": "^3.1.0",
+    "vue-typed-js": "^0.1.2",
+    "vue2-touch-events": "^2.2.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.2.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
     "eslint-loader": "^4.0.0",
     "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.3.2"
   }
 }
