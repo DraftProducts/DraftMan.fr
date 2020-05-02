@@ -28,11 +28,16 @@ export default {
     /*
    ** Global CSS
    */
-    css: ['~/static/normalize.css'],
+    css: [
+        '~/assets/css/normalize.css'
+    ],
     /*
    ** Plugins to load before mounting the App
    */
-    plugins: [],
+    plugins: [
+        './plugins/vue-typed.js',
+        { src: '~/plugins/ga.js', mode: 'client' }
+    ],
     /*
    ** Nuxt.js dev-modules
    */
@@ -45,8 +50,16 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
         // Doc: https://github.com/nuxt-community/dotenv-module
-        '@nuxtjs/dotenv'
+        '@nuxtjs/dotenv',
+        '@nuxtjs/style-resources',
+        'nuxt-svg-loader'
     ],
+
+    styleResources: {
+        scss: [
+            './assets/css/_variables.scss'
+        ]
+    },
     /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -59,6 +72,15 @@ export default {
     /*
      ** You can extend webpack config here
      */
-        extend (config, ctx) {}
+        extend (config, ctx) {
+            if (ctx.isDev && ctx.isClient) {
+                config.module.rules.push({
+                    enforce: 'pre',
+                    test: /\.(js|vue)$/,
+                    loader: 'eslint-loader',
+                    exclude: /(node_modules)|(\.svg$)/ /* <--- here */
+                })
+            }
+        }
     }
 }
