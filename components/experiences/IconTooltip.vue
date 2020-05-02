@@ -9,6 +9,7 @@
 
 <script>
 export default {
+    name: 'IconTooltip',
     props: {
         name: {
             type: String,

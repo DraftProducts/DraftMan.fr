@@ -149,11 +149,11 @@
 
 <script>
 
-import IconPlaceHolder from '@/components/experiences/IconPlaceHolder.vue'
+import IconTooltip from '@/components/experiences/IconTooltip.vue'
 
 export default {
     components: {
-        icon: IconPlaceHolder
+        icon: IconTooltip
     }
 }
 </script>
