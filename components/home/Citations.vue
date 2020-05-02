@@ -56,9 +56,6 @@ export default {
         this.scrollInterval = setInterval(() => this.switchSlide('next', false), 10000)
     },
     methods: {
-        logIt () {
-            console.log('swipe')
-        },
         switchSlide (direction = 'next', manual = true) {
             this.carouselCount += direction === 'next' ? 1 : -1
             if (this.carouselCount > this.items.length || this.carouselCount <= 0) {
