@@ -46,12 +46,11 @@ export default {
    ** Nuxt.js modules
    */
     modules: [
-    // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
-        // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         '@nuxtjs/style-resources',
+        '@nuxtjs/redirect-module',
         'nuxt-svg-loader'
     ],
 
@@ -65,6 +64,38 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
     axios: {},
+
+    redirect: [
+        {
+            from: '^/twitter',
+            to: 'https://twitter.com/DraftMan_Dev'
+        },
+        {
+            from: '^/github',
+            to: 'https://github.com/DraftProducts'
+        },
+        {
+            from: '^/gitlab',
+            to: 'https://gitlab.com/DraftMan'
+        },
+        {
+            from: '^/facebook',
+            to: 'https://www.facebook.com/nicovanaarsen'
+        },
+        {
+            from: '^/paypal',
+            to: 'https://www.paypal.me/draftproducts'
+        },
+        {
+            from: '^/patreon',
+            to: 'https://www.patreon.com/draftman_dev'
+        },
+        {
+            from: '^/discord',
+            to: 'https://discordapp.com/invite/DrzKVU3'
+        }
+    ],
+
     /*
    ** Build configuration
    */
