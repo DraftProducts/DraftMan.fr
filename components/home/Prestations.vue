@@ -26,9 +26,7 @@
             BIG TEXT
           </div>
           <div v-show="!developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure.
+            Offrez à votre projet la visibilité qu’il mérite grace à un site ergonomique et à votre image.
           </div>
         </div>
         <div class="prestation">
@@ -45,9 +43,7 @@
             BIG TEXT
           </div>
           <div v-show="!developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure.
+            Optimisons ensemble le référencement de votre projet afin de votre projet soit n°1 sur Google !
           </div>
         </div>
         <div class="prestation">
@@ -64,9 +60,8 @@
             BIG TEXT
           </div>
           <div v-show="!developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure.
+            Votre identité visuelle est l’élément le plus important.<br>
+            Il vous représente et vous rend unique.
           </div>
         </div>
       </div>
@@ -211,7 +206,7 @@ export default {
                 justify-content: center;
                 align-items: center;
                 background-color: #FFFFFF;
-                padding: 24px 16px;
+                padding: 24px 16px 32px;
                 position: relative;
                 box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
                 transition: box-shadow .3s ease-in-out;
@@ -225,7 +220,7 @@ export default {
                 }
                 .content{
                     text-align: center;
-                    font-size: 12px;
+                    font-size: 13px;
                     animation: popText .5s ease-in-out;
                     color: #505050;
                     @keyframes popText {
