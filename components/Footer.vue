@@ -16,7 +16,6 @@
       </div>
       <div class="column">
         <h4>Contact</h4>
-        <a href="/contact" title="Formulaire">Formulaire</a>
         <a href="/linkedin" target="blank">Linkedin</a>
         <a href="/twitter" target="blank">Twitter</a>
         <a href="/discord" target="blank">Discord</a>
@@ -26,7 +25,7 @@
         <h4>Partenaires</h4>
         <a href="https://www.draftbot.fr" target="blank">DraftBot</a>
         <a href="https://www.blagues-api.fr" target="blank">Blagues API</a>
-        <a href="https://bio2game.com" target="blank">Bio2Game</a>
+        <a href="https://www.bio2game.com/" target="blank">Bio2Game</a>
         <a href="https://wolfy.fr" target="blank">Wolfy</a>
       </div>
     </div>
