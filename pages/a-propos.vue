@@ -134,6 +134,8 @@ import twitter from '@/assets/icons/socials/twitter.svg'
 import linkedin from '@/assets/icons/socials/linkedin.svg'
 import instagram from '@/assets/icons/socials/instagram.svg'
 
+import meta from '@/mixins/meta.js'
+
 export default {
     components: {
         discord,
@@ -152,6 +154,13 @@ export default {
     mounted () {
         this.animation = new Parallax(this.$refs.paralax, {
             relativeInput: true
+        })
+    },
+    head () {
+        return meta.get({
+            name: 'À Propos',
+            description: 'Mon profil t\'interesse ? Ici tu pourras retrouver mon parcours ainsi que mes compétences et en savoir d\'avantage sur moi !',
+            slug: 'a-propos'
         })
     }
 }

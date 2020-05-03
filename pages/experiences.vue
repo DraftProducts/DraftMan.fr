@@ -151,9 +151,18 @@
 
 import IconTooltip from '@/components/experiences/IconTooltip.vue'
 
+import meta from '@/mixins/meta.js'
+
 export default {
     components: {
         icon: IconTooltip
+    },
+    head () {
+        return meta.get({
+            name: 'Experiences',
+            description: 'Mon travail vous intéresse ? Dans ce Portfolio vous pourrez retrouver mes plus gros projets !',
+            slug: 'experiences'
+        })
     }
 }
 </script>
