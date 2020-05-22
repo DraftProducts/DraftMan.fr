@@ -20,10 +20,8 @@
           </div>
           <h4>CRÉATION DE SITES WEB</h4>
           <div v-show="developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure. test<br>
-            BIG TEXT
+            Avec l'évolution du web, la rapidité et l'hergonomie sont deux points essanciels pour ne pas perdre l'utilisateur.
+            Les technologies tel que <strong>VueJS</strong> ou <strong>NuxtJS</strong> me permettent notament de vous proposer des sites <strong title="Client Side Rendering">CSR</strong> ou <strong title="Server Side Rendering">SSR</strong> en fonction de vos besoins en terme de référencement.
           </div>
           <div v-show="!developer" class="content">
             Offrez à votre projet la visibilité qu’il mérite grace à un site ergonomique et à votre image.
@@ -32,15 +30,12 @@
         <div class="prestation">
           <div class="icon-wrapper">
             <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.06372 31.3089C2.06372 47.1086 14.8719 59.9167 30.6716 59.9167C46.4712 59.9167 59.2794 47.1086 59.2794 31.3089C59.2794 15.5092 46.4712 2.70105 30.6716 2.70105C14.8719 2.70105 2.06372 15.5092 2.06372 31.3089ZM30.6716 0.70105C13.7673 0.70105 0.0637207 14.4046 0.0637207 31.3089C0.0637207 48.2131 13.7673 61.9167 30.6716 61.9167C47.5758 61.9167 61.2794 48.2131 61.2794 31.3089C61.2794 14.4046 47.5758 0.70105 30.6716 0.70105ZM37.8453 47.7059H23.4979C21.425 47.7059 19.7402 46.0211 19.7402 43.9482V18.6694C19.7402 16.5965 21.425 14.9117 23.4979 14.9117H37.8453C39.9182 14.9117 41.603 16.5965 41.603 18.6694V43.9482C41.603 46.0211 39.9182 47.7059 37.8453 47.7059ZM23.4979 16.9614C22.5564 16.9614 21.7899 17.7279 21.7899 18.6694V43.9482C21.7899 44.8897 22.5564 45.6562 23.4979 45.6562H37.8453C38.7868 45.6562 39.5533 44.8897 39.5533 43.9482V18.6694C39.5533 17.7279 38.7868 16.9614 37.8453 16.9614H23.4979ZM28.6221 41.5568C28.6221 42.6869 29.5417 43.6065 30.6717 43.6065C31.8017 43.6065 32.7213 42.6869 32.7213 41.5568C32.7213 40.4268 31.8017 39.5072 30.6717 39.5072C29.5417 39.5072 28.6221 40.4268 28.6221 41.5568Z" fill="#CD6E57" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M30.6716 59.9169C14.8719 59.9169 2.06372 47.1087 2.06372 31.309C2.06372 15.5093 14.8719 2.70117 30.6716 2.70117C46.4712 2.70117 59.2794 15.5093 59.2794 31.309C59.2794 47.1087 46.4712 59.9169 30.6716 59.9169ZM0.0637207 31.309C0.0637207 14.4048 13.7673 0.701172 30.6716 0.701172C47.5758 0.701172 61.2794 14.4048 61.2794 31.309C61.2794 48.2133 47.5758 61.9169 30.6716 61.9169C13.7673 61.9169 0.0637207 48.2133 0.0637207 31.309ZM19.7787 44.9998C19.4565 45.0032 19.1351 44.9647 18.8227 44.8852C16.8212 44.3758 15.6088 42.3301 16.115 40.3158C16.6211 38.3014 18.654 37.0815 20.6556 37.5908L24.5338 30.902C23.8768 30.2 23.5128 29.2707 23.5171 28.3063C23.5262 26.2286 25.2072 24.5518 27.2718 24.561C29.3364 24.5702 31.0027 26.2619 30.9935 28.3396C30.9897 28.9611 30.8307 29.5717 30.531 30.1152L32.9684 32.5681C33.6982 32.1466 34.5545 32.0043 35.3801 32.1671L39.6524 23.5457C38.8911 22.8234 38.4628 21.8149 38.4702 20.7619C38.4849 18.6695 40.1825 16.9853 42.2618 17.0001C44.341 17.0149 46.0146 18.7233 45.9999 20.8158C45.9852 22.9082 44.2876 24.5924 42.2083 24.5776C41.9907 24.575 41.7737 24.553 41.56 24.512L37.2877 33.1334C38.0458 33.8483 38.4742 34.8484 38.47 35.8938C38.4617 37.9715 36.7813 39.649 34.7167 39.6406C32.6521 39.6323 30.9852 37.9412 30.9935 35.8635C30.9977 35.2419 31.1571 34.6313 31.4571 34.0879L29.0197 31.6351C28.2185 32.0945 27.2707 32.2207 26.3784 31.9866L22.5002 38.6754C23.1559 39.3744 23.5199 40.3001 23.5169 41.2613C23.5105 43.3325 21.8368 45.0062 19.7787 44.9998ZM43.8104 20.8156C43.8104 19.9252 43.0931 19.2033 42.2083 19.2033C41.3235 19.2033 40.6062 19.9252 40.6062 20.8156C40.6062 21.7061 41.3235 22.4279 42.2083 22.4279C43.0931 22.4279 43.8104 21.7061 43.8104 20.8156ZM36.3339 35.8635C36.3339 34.9731 35.6166 34.2513 34.7318 34.2513C33.8469 34.2513 33.1297 34.9731 33.1297 35.8635C33.1297 36.754 33.8469 37.4758 34.7318 37.4758C35.6166 37.4758 36.3339 36.754 36.3339 35.8635ZM28.8574 28.3396C28.8574 27.4491 28.1401 26.7273 27.2552 26.7273C26.3704 26.7273 25.6531 27.4491 25.6531 28.3396C25.6531 29.23 26.3704 29.9519 27.2552 29.9519C28.1401 29.9519 28.8574 29.23 28.8574 28.3396ZM21.3808 41.2378C21.3808 40.3474 20.6636 39.6255 19.7787 39.6255C18.8939 39.6255 18.1766 40.3474 18.1766 41.2378C18.1766 42.1283 18.8939 42.8501 19.7787 42.8501C20.6636 42.8501 21.3808 42.1283 21.3808 41.2378Z" fill="#CD6E57" />
             </svg>
           </div>
-          <h4>CRÉATION D’APPLICATIONS</h4>
+          <h4>OPTIMISATION SEO</h4>
           <div v-show="developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure. test<br>
-            BIG TEXT
+            L'optimisation de votre site pour le référencement naturel est une étape inévitable si vous souhaitez faire parti du <strong>caré d'or</strong> lors des recherches Google, cela passe par une optimisation du chargement de votre site, mais également la selection des <strong>mots clés précis</strong> qui seront interessants et judicieux de cibler.
           </div>
           <div v-show="!developer" class="content">
             Optimisons ensemble le référencement de votre projet afin de votre projet soit n°1 sur Google !
@@ -54,10 +49,7 @@
           </div>
           <h4>CRÉATION D’IDENTITÉ</h4>
           <div v-show="developer" class="content">
-            Sites vitrines, sites de news, boutiques e-commerce, etc.<br>
-            Retrouvez un large éventail de services de création<br>
-            de sites web sur-mesure. test<br>
-            BIG TEXT
+            L'identité visuelle de votre projet doit être scalable et rester de bonne qualité, peut importe l'appareil sur lequel elle apparait et pour cela rien de mieux qu'un travail <strong>vectoriel</strong>, peu importe le processus de création, en fin projet votre identité vous sera proposé sous tous <strong>les formats actuels</strong> en plus des <strong>sources</strong>.
           </div>
           <div v-show="!developer" class="content">
             Votre identité visuelle est l’élément le plus important.<br>
@@ -192,10 +184,10 @@ export default {
         .elements{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 32px;
+            gap: 32px;
             @media only screen and (max-width: $tablet) {
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 24px;
+                gap: 24px;
             }
             @media only screen and (max-width: $phone) {
                 grid-template-columns: 1fr;
@@ -221,6 +213,7 @@ export default {
                 .content{
                     text-align: center;
                     font-size: 13px;
+                    line-height: 16px;
                     animation: popText .5s ease-in-out;
                     color: #505050;
                     @keyframes popText {
