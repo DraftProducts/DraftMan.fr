@@ -1,6 +1,6 @@
 <template>
   <section id="hero">
-    <h1><span>NICOLAS</span> VAN AARSEN</h1>
+    <h1>NICOLAS <span>VAN AARSEN</span></h1>
     <h2>DÉVELOPPEUR JS FULL-STACK</h2>
     <router-link to="/experiences" title="Mes projets">
       Mes projets
@@ -86,13 +86,16 @@ export default {
         font-size: 70px;
         font-weight: 700;
         letter-spacing: 2px;
-        color: #ffffff;
+        color: #cd6e57;
         font-family: 'Uni Sans';
+        text-align: center;
+        padding: 0 16px;
         span {
-            color: #cd6e57;
+            color: #ffffff;
             font-family: 'Uni Sans';
             font-weight: 700;
             z-index: 3;
+            white-space: nowrap;
         }
 
         @media screen and (max-width: $mobile){
@@ -126,6 +129,7 @@ export default {
         color: white;
         text-align: center;
         margin: 0;
+        margin-bottom: 24px;
 
         @media screen and (max-width: $mobile){
             font-size: 30px;
@@ -157,7 +161,7 @@ export default {
 
     a {
         position: relative;
-        margin: 50px 0 25px;
+        margin: 24px 0;
         padding: 15px 30px;
         border: 1px solid rgba(255, 255, 255, .5);
         -webkit-border-radius: 5px;

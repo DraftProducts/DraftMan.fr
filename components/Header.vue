@@ -33,6 +33,11 @@ export default {
         return {
             menu: false
         }
+    },
+    watch: {
+        $route () {
+            this.menu = false
+        }
     }
 }
 </script>
