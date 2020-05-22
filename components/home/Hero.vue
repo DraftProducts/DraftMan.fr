@@ -1,17 +1,58 @@
 <template>
   <section id="hero">
-    <h1>DraftMan</h1>
-    <h2>Développeur Web & Graphiste</h2>
-    <h3>Lycéen et autoentrepreneur</h3>
-    <router-link to="/experiences" title="Mes travaux">
-      Mes travaux
+    <h1><span>NICOLAS</span> VAN AARSEN</h1>
+    <h2>DÉVELOPPEUR JS FULL-STACK</h2>
+    <router-link to="/experiences" title="Mes projets">
+      Mes projets
     </router-link>
+    <svg
+      class="scroll_down"
+      width="56"
+      height="51"
+      viewBox="0 0 56 51"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      @click="scrollDown()"
+    >
+      <g filter="url(#filter0_d)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07562 4.74869L10.8587 0.965598L28.3556 18.4624L45.8524 0.965576L49.6355 4.74869L28.3556 26.0286L7.07562 4.74869ZM4.71118 18.8543L8.49428 15.0712L28.3556 34.9325L48.2169 15.0711L52 18.8543L28.3556 42.4987L4.71118 18.8543Z" fill="white" />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d"
+          x="0.711182"
+          y="0.965576"
+          width="55.2888"
+          height="49.5331"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+      </defs>
+    </svg>
+    <div ref="scroll" class="line" />
   </section>
 </template>
 
 <script>
 export default {
-    name: 'Hero'
+    name: 'Hero',
+    methods: {
+        scrollDown () {
+            this.$refs.scroll.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            })
+        }
+    }
 }
 </script>
 
@@ -22,21 +63,37 @@ export default {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    height: calc(100vh - 100px);
+    // 190
+    // 70
+    @media only screen and (max-width: $mobile) {
+        height: calc(100vh - 190px);
+    }
+    @media screen and (max-width: $phone){
+        height: calc(100vh - 70px);
+    }
     vertical-align: middle;
-    background-image: url(/images/banner.jpg);
+    background-image: url(/images/banner_dark.jpg);
     background-position: center center;
     background-size: cover;
 
     h1 {
         position: relative;
-        margin: 20px 0;
+        float: left;
+        margin: 20px 0 8px;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.38);
         text-transform: uppercase;
-        font-size: 80px;
+        font-size: 70px;
         font-weight: 700;
         letter-spacing: 2px;
         color: #ffffff;
+        font-family: 'Uni Sans';
+        span {
+            color: #cd6e57;
+            font-family: 'Uni Sans';
+            font-weight: 700;
+            z-index: 3;
+        }
 
         @media screen and (max-width: $mobile){
             font-size: 70px;
@@ -47,22 +104,24 @@ export default {
             margin: 10px 0;
         }
 
-        &:before, &:after {
-            content: "DRAFTMAN";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            overflow: hidden;
-            color: #ffffff;
-        }
+        // &:before, &:after {
+        //     content: "NICOLAS VAN AARSEN";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     left: 0;
+        //     overflow: hidden;
+        //     font-weight: 700;
+        //     color: #cd6e57;
+        //     font-family: 'Uni Sans';
+        // }
     }
 
     h2 {
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.639);
         text-transform: uppercase;
-        font-size: 35px;
-        font-weight: 700;
+        font-size: 30px;
+        font-weight: 600;
         letter-spacing: .6px;
         color: white;
         text-align: center;
@@ -77,28 +136,28 @@ export default {
         }
     }
 
-    h3 {
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.639);
-        text-transform: uppercase;
-        font-size: 25px;
-        font-weight: 700;
-        letter-spacing: .6px;
-        color: white;
-        text-align: center;
-        margin: 16px 0 0 0;
+    // h3 {
+    //     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.639);
+    //     text-transform: uppercase;
+    //     font-size: 25px;
+    //     font-weight: 700;
+    //     letter-spacing: .6px;
+    //     color: white;
+    //     text-align: center;
+    //     margin: 16px 0 0 0;
 
-        @media screen and (max-width: $mobile){
-            font-size: 20px;
-        }
+    //     @media screen and (max-width: $mobile){
+    //         font-size: 20px;
+    //     }
 
-        @media screen and (max-width: $phone){
-            font-size: 15px;
-        }
-    }
+    //     @media screen and (max-width: $phone){
+    //         font-size: 15px;
+    //     }
+    // }
 
     a {
         position: relative;
-        margin: 25px 0;
+        margin: 50px 0 25px;
         padding: 15px 30px;
         border: 1px solid rgba(255, 255, 255, .5);
         -webkit-border-radius: 5px;
@@ -137,6 +196,26 @@ export default {
             text-shadow: -2px 0 #00ffea;
             animation: effect 2s infinite ease-in-out alternate-reverse;
         }
+    }
+
+    .scroll_down{
+        position: absolute;
+        bottom: 30px;
+        margin: 0 auto;
+        cursor: pointer;
+        animation: vertical_move .6s ease-in infinite alternate;
+    }
+    @keyframes vertical_move {
+        from{
+            transform: translateY(-10px);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }
+    .line{
+        position: absolute;
+        bottom: 0;
     }
 }
 
