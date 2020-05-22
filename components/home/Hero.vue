@@ -3,8 +3,8 @@
     <h1>DraftMan</h1>
     <h2>Développeur Web & Graphiste</h2>
     <h3>Lycéen et autoentrepreneur</h3>
-    <router-link to="/portfolio" title="Mon travail">
-      Mon travail
+    <router-link to="/experiences" title="Mes travaux">
+      Mes travaux
     </router-link>
   </section>
 </template>
