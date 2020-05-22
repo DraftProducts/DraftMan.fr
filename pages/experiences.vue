@@ -214,7 +214,7 @@ export default {
         .projects{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 32px;
+            gap: 32px;
             @media screen and (max-width: $large){
                 grid-template-columns: 1fr;
             }

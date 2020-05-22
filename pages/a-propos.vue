@@ -177,7 +177,7 @@ export default {
         .informations{
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-gap: 32px;
+            gap: 32px;
             padding: 60px 0 30px;
             @media screen and (max-width: $mobile){
                 padding: 30px 0;
@@ -293,14 +293,13 @@ export default {
             .content{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 32px;
+                gap: 32px;
                 @media screen and (max-width: $tablet){
                     grid-template-columns: 1fr 1fr;
 
                 }
                 @media screen and (max-width: $mobile){
-                    grid-gap: 24px;
-
+                    gap: 24px;
                 }
                 @media screen and (max-width: $phone){
                     grid-template-columns: 1fr;
