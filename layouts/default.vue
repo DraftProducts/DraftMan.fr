@@ -48,8 +48,7 @@ export default {
             },
 
             // Google / Schema.org markup:
-            { itemprop: 'image', content: `${process.env.BASE_URL}/images/me.png` },
-            { hid: 'robots', name: 'robots', content: 'noindex' }
+            { itemprop: 'image', content: `${process.env.BASE_URL}/images/me.png` }
         ]
     }
 }
