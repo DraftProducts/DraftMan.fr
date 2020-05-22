@@ -182,6 +182,7 @@ export default {
             @media screen and (max-width: $mobile){
                 grid-template-columns: 1fr;
                 padding: 30px 0;
+                gap: 30px 0;
             }
             .image-zone{
                 grid-column: 1;
@@ -189,9 +190,6 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                // @media screen and (max-width: $mobile){
-                //     display: none;
-                // }
                 img{
                     width: 100%;
                     max-width: 300px;
