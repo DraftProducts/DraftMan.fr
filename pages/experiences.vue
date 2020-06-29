@@ -18,7 +18,7 @@
               J’en assure son évolution ainsi que sa maintenance quotidienne.<br>
               Il fut l’un de mes plus gros projets personnels.
             </p>
-            <p class="stats"><strong>11 000</strong> serveurs - <strong>700 000</strong> prospects</p>
+            <p class="stats"><strong>21 000</strong> serveurs - <strong>1 200 000</strong> prospects</p>
             <div class="socials">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
@@ -29,7 +29,6 @@
               <icon icon="sequelize" name="Sequelize" />
               <icon icon="postgresql" name="PostgreSQL" />
               <icon icon="illustrator" name="Illustrator" />
-              <icon icon="analytics" name="Analytics" />
             </div>
           </div>
         </a>
@@ -42,7 +41,7 @@
             <p>
               Wolfy est une adaptation web du jeu populaire Loups-Garous. Je fais partie de l’équipe et contribue principalement au développement de l’application mobile.
             </p>
-            <p class="stats"><strong>1 000 000</strong> joueurs</p>
+            <p class="stats">plus de <strong>1 300 000</strong> joueurs</p>
             <div class="socials">
               <icon icon="flutter" name="Flutter" />
               <icon icon="dart" name="Dart" />
@@ -61,19 +60,19 @@
               BIO2GAME
             </h3>
             <p>
-              Bio2Game est un jeu pour challenger ses connaissances en rapport avec la nature. C’est ma première mission de grande envergure en tant qu’autoentreneur mais également ma première expérience de relation client-collaborateur.
+              Bio2Game est un jeu pour challenger ses connaissances en rapport avec la nature. C’est ma première mission de grande envergure en tant qu’autoentrepreneur mais également ma première expérience de relation client-collaborateur.
             </p>
             <div class="socials">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="adonisjs" name="Adonis.Js" />
               <icon icon="vuejs" name="Vue.Js" />
+              <icon icon="nuxtjs" name="Nuxt.Js" />
               <icon icon="socketio" name="Socket.io" />
               <icon icon="sass" name="SASS" />
               <icon icon="figma" name="Figma" />
               <icon icon="mariadb" name="Mariadb" />
               <icon icon="illustrator" name="Illustrator" />
-              <icon icon="analytics" name="Analytics" />
             </div>
           </div>
         </a>
@@ -106,7 +105,7 @@
               BLAGUES-API
             </h3>
             <p>
-              Blagues API est une api française et communautaire qui regroupe plus de 200 blagues catégorisés et disponibles gratuitement par token authentification Bearer.
+              Blagues API est une api française et communautaire qui regroupe plus de 300 blagues catégorisées et disponibles gratuitement par token authentification Bearer.
               Crée dans le but d’alimenter la fonctionnalité de blagues de DraftBot
             </p>
             <div class="socials">
@@ -131,7 +130,7 @@
             </h3>
             <p>
               SFRégis est le site de l’établissement dans lequel j’ai étudié durant toute ma scolarité.
-              Afin de les remercier, j’ai réalisé un site qui leur correspondait avant de continuer mon parcours au lycée, j’en ai laissé la maintenance au responsable informatique du collège.
+              Afin de les remercier, j’ai réalisé un site et un logo qui leur correspondait avant de continuer mon parcours au lycée, j’en ai laissé la maintenance au responsable informatique.
             </p>
             <div class="socials">
               <icon icon="php" name="Php" />
