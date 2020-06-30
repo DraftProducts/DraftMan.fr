@@ -69,11 +69,32 @@
             <p>VueJs est le framework js frontend client side rendering que j’utilises lorsque j’ai besoin de réaliser une application puissante et que le SEO n’entre pas en jeu.</p>
           </a>
           <a class="item" href="">
+            <img src="/images/competences/adonisjs.png" alt="Adonis.js" title="Adonis.js">
+            <h3 class="title">
+              ADONIS.JS
+            </h3>
+            <p>AdonisJs est le framework Node.js backend que j’utilise pour la création de grosses api’s pour les projets de grande ampleur sur de longues durées.</p>
+          </a>
+          <a class="item" href="">
             <img src="/images/competences/expressjs.png" alt="Express.js" title="Express.js">
             <h3 class="title">
               EXPRESS.JS
             </h3>
             <p>Après être passé par de nombreux framework backend Js, je suis finalement revenu aux sources. Express.Js me permet d’avoir un backend minimaliste et puissant.</p>
+          </a>
+          <a class="item" href="">
+            <img src="/images/competences/flutter.png" alt="Flutter" title="Flutter">
+            <h3 class="title">
+              FLUTTER
+            </h3>
+            <p>Flutter est un framework de développement mobile cross plateforme en Dart. Il me permet de créer des applications Android et IOS natives avec un seul code. </p>
+          </a>
+          <a class="item" href="">
+            <img src="/images/competences/git.png" alt="Git" title="Git">
+            <h3 class="title">
+              GIT
+            </h3>
+            <p>Outil le plus important pour le développeur, j’utilise Git pour le versionning de mes projets et suis principalement fan du workflow Gitflow.</p>
           </a>
           <a class="item" href="">
             <img src="/images/competences/figma.png" alt="Figma" title="Figma">
@@ -90,11 +111,11 @@
             <p>Premier outil de prototypage, Adobe XD me permet de travailler sur des projets existants et de rester dans l’écosystème Adobe.</p>
           </a>
           <a class="item" href="">
-            <img src="/images/competences/git.png" alt="Git" title="Git">
+            <img src="/images/competences/linux.png" alt="Linux" title="Linux">
             <h3 class="title">
-              GIT
+              LINUX
             </h3>
-            <p>Outil le plus important pour le développeur, j’utilise Git pour le versionning de mes projets et suis principalement fan du workflow Gitflow.</p>
+            <p>Depuis mes débuts j’ai toujours été un grand fan des distributions linux. J’en ai d’ailleurs utilisé comme OS principal durant plusieurs années.</p>
           </a>
           <a class="item" href="">
             <img src="/images/competences/illustrator.png" alt="Illustrator" title="Illustrator">
@@ -111,11 +132,11 @@
             <p>J’utilises souvent photoshop pour du traitement d’image ou bien pour la création de visuels matriciels ne pouvant pas être vectorisés.</p>
           </a>
           <a class="item" href="">
-            <img src="/images/competences/linux.png" alt="Linux" title="Linux">
+            <img src="/images/competences/aftereffect.png" alt="After Effect" title="After Effect">
             <h3 class="title">
-              LINUX
+              ADOBE AFTER EFFECT
             </h3>
-            <p>Depuis mes débuts j’ai toujours été un grand fan des distributions linux. J’ai d’ailleurs pu utiliser la plus connus comme OS principal.</p>
+            <p>La référence en terme d’animation, Adobe After Effect me permet de réaliser des animtions qui d’améliorent l’apparence de mes créations.</p>
           </a>
         </div>
       </div>
