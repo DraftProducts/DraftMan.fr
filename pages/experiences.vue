@@ -18,16 +18,18 @@
               J’en assure son évolution ainsi que sa maintenance quotidienne.<br>
               Il fut l’un de mes plus gros projets personnels.
             </p>
-            <p class="stats"><strong>21 000</strong> serveurs - <strong>1 200 000</strong> prospects</p>
+            <p class="stats"><strong>{{ stats.servers }}</strong> serveurs - <strong>{{ stats.users }}</strong> prospects</p>
             <div class="socials">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="discordjs" name="Discord.Js" />
               <icon icon="nuxtjs" name="Nuxt.Js" />
               <icon icon="sass" name="SASS" />
-              <icon icon="figma" name="Figma" />
               <icon icon="sequelize" name="Sequelize" />
+              <icon icon="rabbitmq" name="RabbitMQ" />
               <icon icon="postgresql" name="PostgreSQL" />
+              <icon icon="redis" name="Redis" />
+              <icon icon="figma" name="Figma" />
               <icon icon="illustrator" name="Illustrator" />
             </div>
           </div>
@@ -162,7 +164,21 @@ export default {
             description: 'Mon travail vous intéresse ? Dans ce Portfolio vous pourrez retrouver mes plus gros projets !',
             slug: 'experiences'
         })
-    }
+    },
+    data() {
+        return {
+            stats: {
+                guilds: '38 000',
+                users: '2 000 000'
+            }
+        }
+    },
+    mounted() {
+        const stats = await this.$axios.$get('https://api.draftbot.fr/base/stats').catch(() => null);
+        if(stats) {
+            this.stats = stats
+        }
+    },
 }
 </script>
 
