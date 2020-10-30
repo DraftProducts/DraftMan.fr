@@ -78,28 +78,6 @@
             </div>
           </div>
         </a>
-        <div class="item">
-          <img class="logo" src="/images/projects/providence-maths.png" alt="Providence Maths" title="Providence Maths">
-          <div class="content">
-            <h3 class="title">
-              PROVIDENCE MATHS
-            </h3>
-            <p>
-              Providence Maths est un site qui proposes: des cours, exercices et évaluations corrigés gratuitement.
-              En colaboration avec mon professeur de maths, je suis en train de concevoir un site ergonomique et morderne.
-            </p>
-            <div class="socials">
-              <icon icon="nodejs" name="Node.Js" />
-              <icon icon="expressjs" name="Express.Js" />
-              <icon icon="nuxtjs" name="Nuxt.Js" />
-              <icon icon="sass" name="SASS" />
-              <icon icon="figma" name="Figma" />
-              <icon icon="illustrator" name="Illustrator" />
-              <icon icon="photoshop" name="Photoshop" />
-              <icon icon="analytics" name="Analytics" />
-            </div>
-          </div>
-        </div>
         <a class="item" href="https://www.blagues-api.fr">
           <img class="logo" src="/images/projects/blagues-api.png" alt="Blagues API" title="Blagues API">
           <div class="content">
@@ -124,6 +102,28 @@
             </div>
           </div>
         </a>
+        <div class="item">
+          <img class="logo" src="/images/projects/providence-maths.png" alt="Providence Maths" title="Providence Maths">
+          <div class="content">
+            <h3 class="title">
+              PROVIDENCE MATHS
+            </h3>
+            <p>
+              Providence Maths est un site qui proposes: des cours, exercices et évaluations corrigés gratuitement.
+              En colaboration avec mon professeur de maths, je suis en train de concevoir un site ergonomique et morderne.
+            </p>
+            <div class="socials">
+              <icon icon="nodejs" name="Node.Js" />
+              <icon icon="expressjs" name="Express.Js" />
+              <icon icon="nuxtjs" name="Nuxt.Js" />
+              <icon icon="sass" name="SASS" />
+              <icon icon="figma" name="Figma" />
+              <icon icon="illustrator" name="Illustrator" />
+              <icon icon="photoshop" name="Photoshop" />
+              <icon icon="analytics" name="Analytics" />
+            </div>
+          </div>
+        </div>
         <div class="item">
           <img class="logo" src="/images/projects/sfr.png" alt="Saint François Régis" title="Saint François Régis">
           <div class="content">
