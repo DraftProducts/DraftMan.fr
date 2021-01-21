@@ -20,7 +20,7 @@
           </div>
           <h4>CRÉATION DE SITES WEB</h4>
           <div v-show="developer" class="content">
-            Avec l'évolution du web, la rapidité et l'hergonomie sont deux points essanciels pour ne pas perdre l'utilisateur.
+            Avec l'évolution du web, la rapidité et l'ergonomie sont deux points essanciels pour ne pas perdre l'utilisateur.
             Les technologies tel que <strong>VueJS</strong> ou <strong>NuxtJS</strong> me permettent notament de vous proposer des sites <strong title="Client Side Rendering">CSR</strong> ou <strong title="Server Side Rendering">SSR</strong> en fonction de vos besoins en terme de référencement.
           </div>
           <div v-show="!developer" class="content">
@@ -35,7 +35,7 @@
           </div>
           <h4>OPTIMISATION SEO</h4>
           <div v-show="developer" class="content">
-            L'optimisation de votre site pour le référencement naturel est une étape inévitable si vous souhaitez faire parti du <strong>caré d'or</strong> lors des recherches Google, cela passe par une optimisation du chargement de votre site, mais également la selection des <strong>mots clés précis</strong> qui seront interessants et judicieux de cibler.
+            L'optimisation de votre site pour le référencement naturel est une étape inévitable si vous souhaitez faire parti du <strong>carré d'or</strong> lors des recherches Google, cela passe par une optimisation du chargement de votre site, mais également la selection des <strong>mots clés précis</strong> qui seront interessants et judicieux de cibler.
           </div>
           <div v-show="!developer" class="content">
             Optimisons ensemble le référencement de votre projet afin de votre projet soit n°1 sur Google !

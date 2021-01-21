@@ -18,8 +18,10 @@
               J’en assure son évolution ainsi que sa maintenance quotidienne.<br>
               Il fut l’un de mes plus gros projets personnels.
             </p>
-            <p class="stats"><strong>{{ stats.servers }}</strong> serveurs - <strong>{{ stats.users }}</strong> prospects</p>
-            <div class="socials">
+            <transition name="fade">
+              <p v-if="stats" class="stats"><strong>{{ stats.guilds }}</strong> serveurs - <strong>{{ stats.users }}</strong> prospects</p>
+            </transition>
+            <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="discordjs" name="Discord.Js" />
@@ -44,7 +46,7 @@
               Wolfy est une adaptation web du jeu populaire Loups-Garous. Je fais partie de l’équipe et contribue principalement au développement de l’application mobile.
             </p>
             <p class="stats">plus de <strong>1 300 000</strong> joueurs</p>
-            <div class="socials">
+            <div class="tools">
               <icon icon="flutter" name="Flutter" />
               <icon icon="dart" name="Dart" />
               <icon icon="nodejs" name="Node.Js" />
@@ -64,7 +66,7 @@
             <p>
               Bio2Game est un jeu pour challenger ses connaissances en rapport avec la nature. C’est ma première mission de grande envergure en tant qu’autoentrepreneur mais également ma première expérience de relation client-collaborateur.
             </p>
-            <div class="socials">
+            <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="adonisjs" name="Adonis.Js" />
@@ -88,7 +90,7 @@
               Blagues API est une api française et communautaire qui regroupe plus de 300 blagues catégorisées et disponibles gratuitement par token authentification Bearer.
               Crée dans le but d’alimenter la fonctionnalité de blagues de DraftBot
             </p>
-            <div class="socials">
+            <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="discordjs" name="Discord.Js" />
@@ -112,7 +114,7 @@
               Providence Maths est un site qui proposes: des cours, exercices et évaluations corrigés gratuitement.
               En colaboration avec mon professeur de maths, je suis en train de concevoir un site ergonomique et morderne.
             </p>
-            <div class="socials">
+            <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
               <icon icon="nuxtjs" name="Nuxt.Js" />
@@ -134,7 +136,7 @@
               SFRégis est le site de l’établissement dans lequel j’ai étudié durant toute ma scolarité.
               Afin de les remercier, j’ai réalisé un site et un logo qui leur correspondait avant de continuer mon parcours au lycée, j’en ai laissé la maintenance au responsable informatique.
             </p>
-            <div class="socials">
+            <div class="tools">
               <icon icon="php" name="Php" />
               <icon icon="sass" name="SASS" />
               <icon icon="adobexd" name="Adobe XD" />
@@ -158,31 +160,37 @@ export default {
     components: {
         icon: IconTooltip
     },
+    data () {
+        return {
+            stats: null
+        }
+    },
+    async mounted () {
+        const stats = await this.$axios.$get('https://api.draftbot.fr/base/stats').catch(() => null)
+        if (stats) {
+            this.stats = {
+                users: (Math.ceil(stats.users / 10000) * 10000).toLocaleString(),
+                guilds: (Math.ceil(stats.guilds / 1000) * 1000).toLocaleString()
+            }
+        }
+    },
     head () {
         return meta.get({
             name: 'Experiences',
             description: 'Mon travail vous intéresse ? Dans ce Portfolio vous pourrez retrouver mes plus gros projets !',
             slug: 'experiences'
         })
-    },
-    data() {
-        return {
-            stats: {
-                guilds: '38 000',
-                users: '2 000 000'
-            }
-        }
-    },
-    mounted() {
-        const stats = await this.$axios.$get('https://api.draftbot.fr/base/stats').catch(() => null);
-        if(stats) {
-            this.stats = stats
-        }
-    },
+    }
 }
 </script>
 
 <style lang="scss">
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
 .experiences{
     background-color: #F3F3F3;
     .wrapper{
@@ -251,10 +259,12 @@ export default {
                     flex-direction: column;
                 }
                 .logo{
-                    // width: 100%;
-                    height: 100%;
+                    height: 180px;
+                    width: 180px;
+                    min-width: 180px;
                     @media screen and (max-width: $mobile){
                         height: 100px;
+                        width: 100px;
                     }
                     @media only screen and (max-width: $phone) {
                         display: none;
@@ -282,7 +292,7 @@ export default {
                             margin: 2px 0 8px;
                         }
                     }
-                    .socials{
+                    .tools{
                         display: flex;
                         align-items: flex-end;
                         flex: 1;
