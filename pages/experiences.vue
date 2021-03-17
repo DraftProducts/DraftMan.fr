@@ -17,7 +17,7 @@
           <div class="content">
             <h2 class="title">DRAFTBOT</h2>
             <p>
-              DraftBot est un bot discord francophone que j’ai imaginé et
+              DraftBot est un bot Discord francophone que j’ai imaginé et
               développé.<br />
               J’en assure son évolution ainsi que sa maintenance quotidienne.<br />
               Il fut l’un de mes plus gros projets personnels.

@@ -41,7 +41,7 @@
             vos besoins en terme de référencement.
           </div>
           <div v-show="!developer" class="content">
-            Offrez à votre projet la visibilité qu’il mérite grace à un site
+            Offrez à votre projet la visibilité qu’il mérite grâce à un site
             ergonomique et à votre image.
           </div>
         </div>
