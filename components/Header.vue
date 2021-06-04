@@ -1,17 +1,47 @@
+<i18n global>
+{
+  "fr": {
+    "title": "DraftMan",
+    "logo": "Logo DraftMan",
+    "home": "Accueil",
+    "about-me": "À Propos",
+    "experiences": "Expériences",
+    "draftbot": "DraftBot"
+  },
+  "nl": {
+    "title": "DraftMan",
+    "logo": "Logo DraftMan",
+    "home": "Ontvangst",
+    "about-me": "Over Mij",
+    "experiences": "Ervaringen",
+    "draftbot": "DraftBot"
+  }
+}
+</i18n>
+
 <template>
   <header>
     <div class="wrapper" :class="{ active: menu }">
-      <router-link to="/" title="DraftMan">
+      <router-link :to="localePath('/')" :title="$t('title')">
         <img class="logo" alt="Logo DraftMan" src="/images/headerlogo.png" />
       </router-link>
       <div id="mobile-nav-button" @click="menu = !menu" />
       <nav id="nav">
-        <router-link to="/" title="Accueil"> Accueil </router-link>
-        <router-link to="/a-propos" title="À Propos"> À Propos </router-link>
-        <router-link to="/experiences" title="Expreiences">
-          Experiences
+        <router-link :to="localePath('/')" :title="$t('home')">
+          {{ $t('home') }}
         </router-link>
-        <a href="https://www.draftbot.fr" title="DraftBot">DraftBot</a>
+        <router-link :to="localePath('/a-propos')" :title="$t('about-me')">
+          {{ $t('about-me') }}
+        </router-link>
+        <router-link
+          :to="localePath('/experiences')"
+          :title="$t('experiences')"
+        >
+          {{ $t('experiences') }}
+        </router-link>
+        <a href="https://www.draftbot.fr" :title="$t('draftbot')">
+          {{ $t('draftbot') }}
+        </a>
       </nav>
       <div class="overlay" @click="menu = false" />
     </div>

@@ -1,3 +1,16 @@
+<i18n global>
+{
+  "fr": {
+    "raw_title": "DraftMan - Développeur JS Full-Stack",
+    "description": "DraftMan, Développeur Javascript Full-Stack passionné par le design et l'ergonomie"
+  },
+  "nl": {
+    "raw_title": "DraftMan - Full-Stack JavaScript Developer",
+    "description": "DraftMan, Full-Stack Javascript Developer met passie voor design en ergonomie"
+  }
+}
+</i18n>
+
 <template>
   <div>
     <Hero />
@@ -21,8 +34,8 @@ export default {
   },
   head() {
     return meta.get({
-      description:
-        "DraftMan, Développeur Javascript Full-Stack passionné par le design et l'ergnonomie",
+      title: this.$t('raw_title'),
+      description: this.$t('description'),
     })
   },
 }

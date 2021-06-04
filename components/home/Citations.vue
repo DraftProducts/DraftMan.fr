@@ -1,3 +1,20 @@
+<i18n global>
+{
+  "fr": {
+    "quote1": "“J’ai toujours rêvé que mon ordinateur soit aussi simple à utiliser que mon téléphone. Ce rêve est devenu réalité : je ne comprends plus comment utiliser mon téléphone”",
+    "quote2": "“Le manuel disait « Nécessite Windows XP ou mieux ». J’ai donc installé Linux.”",
+    "quote3": "“Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter.”",
+    "quote4": "“Je ne suis pas asocial, je ne suis juste pas orienté utilisateur.”"
+  },
+  "nl": {
+    "quote1": "“Ik heb er altijd van gedroomd dat mijn computer net zo gebruiksvriendelijk is als mijn telefoon. Deze droom is uitgekomen: ik begrijp niet meer hoe ik mijn telefoon moet gebruiken”",
+    "quote2": "“In de handleiding stond « Windows XP of beter vereist ». Dus ik heb Linux geïnstalleerd.”",
+    "quote3": "“Als foutopsporing het verwijderen van bugs is, kan programmeren deze alleen toevoegen.”",
+    "quote4": "“Ik ben niet asociaal, ik ben gewoon niet gebruikersgericht.”"
+  }
+}
+</i18n>
+
 <template>
   <section class="citations">
     <div class="control left" @click="switchSlide('prev', true)" />
@@ -33,23 +50,19 @@ export default {
     return {
       items: [
         {
-          quote:
-            '“J’ai toujours rêvé que mon ordinateur soit aussi simple à utiliser que mon téléphone. Ce rêve est devenu réalité : je ne comprends plus comment utiliser mon téléphone”',
+          quote: this.$t('quote1'),
           author: 'Bjarne Stroustrup',
         },
         {
-          quote:
-            '“Le manuel disait « Nécessite Windows XP ou mieux ». J’ai donc installé Linux.”',
+          quote: this.$t('quote1'),
           author: 'Gerald Weinberg',
         },
         {
-          quote:
-            '“Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter.”',
+          quote: this.$t('quote3'),
           author: 'Edsger Dijkstra',
         },
         {
-          quote:
-            '“Je ne suis pas asocial, je ne suis juste pas orienté utilisateur.”',
+          quote: this.$t('quote4'),
           author: 'Peter Funk',
         },
       ],

@@ -6,9 +6,7 @@ export default {
    * @param {String} d.slug
    */
   get(d) {
-    const title = d.name
-      ? `${d.name} DraftMan - Développeur JS Full-Stack`
-      : 'DraftMan - Développeur JS Full-Stack'
+    const title = d.name ? `${d.name} ${d.title}` : d.title
 
     const meta = [
       {

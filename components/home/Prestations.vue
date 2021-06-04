@@ -1,15 +1,84 @@
+<i18n global>
+{
+  "fr": {
+    "title": "Prestations",
+    "projects": "Mes projets",
+    "button": {
+      "developer": "Développeur ?",
+      "user": "Utilisateur ?"
+    },
+    "prestations": {
+      "web": {
+        "title": "CRÉATION DE SITES WEB",
+        "description": {
+          "developer": "Avec l'évolution du web, la rapidité et l'ergonomie sont deux points essanciels pour ne pas perdre l'utilisateur. Les technologies tel que <strong>VueJs</strong> ou <strong>NuxtJs</strong> me permettent notament de vous proposer des sites <strong title=\"Client Side Rendering\">CSR</strong> ou <strong title=\"Server Side Rendering\">SSR</strong> en fonction de vos besoins en terme de référencement.",
+          "user": "Offrez à votre projet la visibilité qu’il mérite grâce à un site ergonomique et à votre image."
+        }
+      },
+      "seo": {
+        "title": "OPTIMISATION SEO",
+        "description": {
+          "developer": "L'optimisation de votre site pour le référencement naturel est une étape inévitable si vous souhaitez faire parti du <strong>carré d'or</strong> lors des recherches Google, cela passe par une optimisation du chargement de votre site, mais également la selection des <strong>mots clés précis</strong> qui seront interessants et judicieux de cibler.",
+          "user": "Optimisons ensemble le référencement de votre projet afin de votre projet soit n°1 sur Google !"
+        }
+      },
+      "graphic": {
+        "title": "CRÉATION D’IDENTITÉ",
+        "description": {
+          "developer": "L'identité visuelle de votre projet doit être scalable et rester de bonne qualité, peut importe l'appareil sur lequel elle apparait et pour cela rien de mieux qu'un travail <strong>vectoriel</strong>, peu importe le processus de création, en fin projet votre identité vous sera proposé sous tous <strong>les formats actuels</strong> en plus des <strong>sources</strong>.",
+          "user": "Votre identité visuelle est l’élément le plus important.<br /> Il vous représente et vous rend unique."
+        }
+      }
+    }
+  },
+  "nl": {
+    "title": "Voordelen",
+    "projects": "Mijn projecten",
+    "button": {
+      "developer": "Ontwikkelaar ?",
+      "user": "Gebruiker ?"
+    },
+    "prestations": {
+      "web": {
+        "title": "AANMAKEN VAN WEBSITES",
+        "description": {
+          "developer": "Met de evolutie van het web zijn snelheid en ergonomie twee essentiële punten om de gebruiker niet te verliezen. Technologieën zoals <strong>VueJs</strong> of <strong>NuxtJs</strong> stellen mij in staat om u <strong title=\"Client Side Rendering\">CSR</strong> of <strong title=\"Server Side Rendering\">SSR</strong> sites aan te bieden op basis van uw SEO-behoeften.",
+          "user": "Geef uw project de zichtbaarheid die het verdient met een ergonomische site die uw imago weerspiegelt."
+        }
+      },
+      "seo": {
+        "title": "SEO-OPTIMALISATIE",
+        "description": {
+          "developer": "Het optimaliseren van uw site voor natuurlijke verwijzingen is een onvermijdelijke stap als u deel wilt uitmaken van het <strong>gouden vierkant</strong> tijdens Google-zoekopdrachten, dit omvat het optimaliseren van het laden van uw site, maar ook de selectie van de <strong>precieze zoekwoorden</strong> die interessant en oordeelkundig zijn om te targeten.",
+          "user": "Laten we samen de referentie van uw project optimaliseren, zodat uw project nummer 1 is op Google !"
+        }
+      },
+      "graphic": {
+        "title": "IDENTITEITSCREATIE",
+        "description": {
+          "developer": "De visuele identiteit van uw project moet schaalbaar zijn en van goede kwaliteit blijven, ongeacht het apparaat waarop het verschijnt en daarvoor niets beters dan een <strong>vectorwerk</strong>, ongeacht het creatieproces, aan het einde van het project zal je identiteit zijn aangeboden in alle <strong>gangbare formaten</strong> naast de <strong>sources</strong>.",
+          "user": "Uw visuele identiteit is het belangrijkste element. <br /> Het vertegenwoordigt jou en maakt je uniek."
+        }
+      }
+    }
+  }
+}
+</i18n>
+
 <template>
   <section id="prestations">
     <div class="wrapper">
       <div class="head">
         <div class="title">
-          <h3>Prestations</h3>
+          <h3>{{ $t('title') }}</h3>
         </div>
         <div
           :class="['button', developer ? 'developer' : '']"
+          :developer="$t('button.developer')"
+          :user="$t('button.user')"
           @click="developer = !developer"
         >
-          <span>DÉVELOPPEUR ?</span>
+          <span>{{ $t('button.developer') }}</span>
         </div>
       </div>
       <div class="elements">
@@ -30,20 +99,17 @@
               />
             </svg>
           </div>
-          <h4>CRÉATION DE SITES WEB</h4>
-          <div v-show="developer" class="content">
-            Avec l'évolution du web, la rapidité et l'ergonomie sont deux points
-            essanciels pour ne pas perdre l'utilisateur. Les technologies tel
-            que <strong>VueJS</strong> ou <strong>NuxtJS</strong> me permettent
-            notament de vous proposer des sites
-            <strong title="Client Side Rendering">CSR</strong> ou
-            <strong title="Server Side Rendering">SSR</strong> en fonction de
-            vos besoins en terme de référencement.
-          </div>
-          <div v-show="!developer" class="content">
-            Offrez à votre projet la visibilité qu’il mérite grâce à un site
-            ergonomique et à votre image.
-          </div>
+          <h4>{{ $t('prestations.web.title') }}</h4>
+          <div
+            v-show="developer"
+            class="content"
+            v-html="$t('prestations.web.description.developer')"
+          />
+          <div
+            v-show="!developer"
+            class="content"
+            v-html="$t('prestations.web.description.user')"
+          />
         </div>
         <div class="prestation">
           <div class="icon-wrapper">
@@ -62,19 +128,17 @@
               />
             </svg>
           </div>
-          <h4>OPTIMISATION SEO</h4>
-          <div v-show="developer" class="content">
-            L'optimisation de votre site pour le référencement naturel est une
-            étape inévitable si vous souhaitez faire parti du
-            <strong>carré d'or</strong> lors des recherches Google, cela passe
-            par une optimisation du chargement de votre site, mais également la
-            selection des <strong>mots clés précis</strong> qui seront
-            interessants et judicieux de cibler.
-          </div>
-          <div v-show="!developer" class="content">
-            Optimisons ensemble le référencement de votre projet afin de votre
-            projet soit n°1 sur Google !
-          </div>
+          <h4>{{ $t('prestations.seo.title') }}</h4>
+          <div
+            v-show="developer"
+            class="content"
+            v-html="$t('prestations.seo.description.developer')"
+          />
+          <div
+            v-show="!developer"
+            class="content"
+            v-html="$t('prestations.seo.description.user')"
+          />
         </div>
         <div class="prestation">
           <div class="icon-wrapper">
@@ -93,23 +157,20 @@
               />
             </svg>
           </div>
-          <h4>CRÉATION D’IDENTITÉ</h4>
-          <div v-show="developer" class="content">
-            L'identité visuelle de votre projet doit être scalable et rester de
-            bonne qualité, peut importe l'appareil sur lequel elle apparait et
-            pour cela rien de mieux qu'un travail <strong>vectoriel</strong>,
-            peu importe le processus de création, en fin projet votre identité
-            vous sera :proposé sous tous <strong>les formats actuels</strong> en
-            plus des <strong>sources</strong>.
-          </div>
-          <div v-show="!developer" class="content">
-            Votre identité visuelle est l’élément le plus important.<br />
-            Il vous représente et vous rend unique.
-          </div>
+          <h4>{{ $t('prestations.graphic.title') }}</h4>
+          <div
+            v-show="developer"
+            class="content"
+            v-html="$t('prestations.graphic.description.developer')"
+          />
+          <div
+            v-show="!developer"
+            class="content"
+            v-html="$t('prestations.graphic.description.user')"
+          />
         </div>
       </div>
     </div>
-    :
   </section>
 </template>
 
@@ -195,7 +256,8 @@ export default {
           display: none;
         }
         &::after {
-          content: 'DÉVELOPPEUR ?';
+          content: attr(developer);
+          text-transform: uppercase;
           color: #cd6e57;
           transition: 0.1s color ease-in;
           position: relative;
@@ -227,6 +289,7 @@ export default {
           }
           &::after {
             content: 'Je te comprends !';
+            text-transform: initial;
             color: #ffffff;
             transition: 0.3s color ease-in-out;
           }
@@ -262,6 +325,7 @@ export default {
         cursor: pointer;
         h4 {
           font-weight: 700;
+          text-transform: uppercase;
           text-align: center;
           font-size: 20px;
           margin: 16px 0 16px;

@@ -3,6 +3,7 @@
     <Header />
     <nuxt class="container" />
     <Footer />
+    <StitchDown />
   </div>
 </template>
 
@@ -15,40 +16,51 @@ export default {
     Header,
     Footer,
   },
-  head: {
-    meta: [
-      // OpenGraph data (Most widely used)
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'DraftMan.fr' },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: `${process.env.BASE_URL}/images/me.png`,
-      },
-      {
-        hid: 'og:image:secure_url',
-        property: 'og:image:secure_url',
-        content: `${process.env.BASE_URL}/images/me.png`,
-      },
 
-      // Twitter card
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@DraftMan_Dev' },
-      {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@DraftMan_Dev',
-      },
-      {
-        hid: 'twitter:image:src',
-        name: 'twitter:image:src',
-        content: `${process.env.BASE_URL}/images/me.png`,
-      },
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      htmlAttrs: i18nHead.htmlAttrs,
+      meta: [
+        // OpenGraph data (Most widely used)
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'DraftMan.fr',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: `${process.env.BASE_URL}/images/me.png`,
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: `${process.env.BASE_URL}/images/me.png`,
+        },
 
-      // Google / Schema.org markup:
-      { itemprop: 'image', content: `${process.env.BASE_URL}/images/me.png` },
-    ],
+        // Twitter card
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@DraftMan_Dev' },
+        {
+          hid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: '@DraftMan_Dev',
+        },
+        {
+          hid: 'twitter:image:src',
+          name: 'twitter:image:src',
+          content: `${process.env.BASE_URL}/images/me.png`,
+        },
+
+        // Google / Schema.org markup:
+        { itemprop: 'image', content: `${process.env.BASE_URL}/images/me.png` },
+        ...i18nHead.meta,
+      ],
+      link: i18nHead.link,
+    }
   },
 }
 </script>
@@ -65,6 +77,7 @@ export default {
     url('../assets/fonts/UniSans.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .container {

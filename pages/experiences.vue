@@ -1,9 +1,64 @@
+<i18n global>
+{
+  "fr": {
+    "raw_title": "DraftMan - Développeur JS Full-Stack",
+    "title": "Experiences",
+    "description": "Mon travail vous intéresse ? Dans ce Portfolio vous pourrez retrouver mes plus gros projets !",
+    "projects": {
+      "draftbot": {
+        "title": "DraftBot",
+        "description": "DraftBot est un bot Discord francophone que j’ai imaginé et développé.<br /> J’en assure son évolution ainsi que sa maintenance quotidienne.<br /> Il fut l’un de mes plus gros projets personnels.",
+        "stats": "<b>{guilds}</b> serveurs - <b>{users}</b> prospects"
+      },
+      "wolfy": {
+        "title": "Wolfy",
+        "description": "Wolfy est une adaptation web du jeu populaire Loups-Garous. J'ai fait parti de l’équipe et ai contribué au développement de l’application mobile.",
+        "stats": "Plus de <b>{count}</b> joueurs inscrits"
+      },
+      "bio2game": {
+        "title": "Bio2Game",
+        "description": "Bio2Game est un jeu pour challenger ses connaissances en rapport avec la nature. C’est ma première mission de grande envergure en tant qu’autoentrepreneur mais également ma première expérience de relation client-collaborateur."
+      },
+      "blagues-api": {
+        "title": "Blagues API",
+        "description": "Blagues API est une api française et communautaire qui regroupe plus de 300 blagues catégorisées et disponibles gratuitement par token authentification Bearer. Crée dans le but d’alimenter la fonctionnalité de blagues de DraftBot"
+      }
+    }
+  },
+  "nl": {
+    "raw_title": "DraftMan - Full-Stack JavaScript Developer",
+    "title": "Ervaringen",
+    "description": "Ben je geïnteresseerd in mijn werk? In deze Portfolio vind je mijn grootste projecten!",
+    "projects": {
+      "draftbot": {
+        "title": "DraftBot",
+        "description": "DraftBot is een Franstalige Discord-bot die ik heb bedacht en ontwikkeld. <br /> Ik zorg voor zowel de evolutie als het dagelijkse onderhoud. <br /> Het was een van mijn grootste persoonlijke projecten.",
+        "stats": "<b>{guilds}</b> serveurs - <b>{users}</b> prospects"
+      },
+      "wolfy": {
+        "title": "Wolfy",
+        "description": "Wolfy is een webversie van het populaire Werewolves-spel. Ik maakte deel uit van het team en droeg bij aan de ontwikkeling van de mobiele applicatie.",
+        "stats": "Meer dan <b>{count}</b> geregistreerde spelers"
+      },
+      "bio2game": {
+        "title": "Bio2Game",
+        "description": "Bio2Game is een spel om je kennis in relatie tot de natuur uit te dagen. Dit is mijn eerste grootschalige missie als zelfstandige, maar ook mijn eerste ervaring in klant-werknemerrelaties."
+      },
+      "blagues-api": {
+        "title": "Blagues API",
+        "description": "Blagues-API is een Franse en community-API die meer dan 300 gecategoriseerde grappen samenbrengt die gratis beschikbaar zijn via Bearer-authenticatietoken. Gemaakt om de grapfunctionaliteit van DraftBot te voeden"
+      }
+    }
+  }
+}
+</i18n>
+
 <template>
   <div class="experiences">
     <div class="wrapper">
       <div class="head">
         <div class="title">
-          <h1>Experiences</h1>
+          <h1>{{ $t('title') }}</h1>
         </div>
       </div>
       <div class="projects">
@@ -11,22 +66,18 @@
           <img
             class="logo"
             src="/images/projects/draftbot.png"
-            alt="DraftBot"
-            title="DraftBot"
+            :alt="$t('projects.draftbot.title')"
+            :title="$t('projects.draftbot.title')"
           />
           <div class="content">
-            <h2 class="title">DRAFTBOT</h2>
-            <p>
-              DraftBot est un bot Discord francophone que j’ai imaginé et
-              développé.<br />
-              J’en assure son évolution ainsi que sa maintenance quotidienne.<br />
-              Il fut l’un de mes plus gros projets personnels.
-            </p>
+            <h2 class="title">{{ $t('projects.draftbot.title') }}</h2>
+            <p v-html="$t('projects.draftbot.description')" />
             <transition name="fade">
-              <p v-if="stats" class="stats">
-                <strong>{{ stats.guilds }}</strong> serveurs -
-                <strong>{{ stats.users }}</strong> prospects
-              </p>
+              <p
+                v-if="stats"
+                class="stats"
+                v-html="$t('projects.draftbot.stats', stats)"
+              />
             </transition>
             <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
@@ -47,17 +98,16 @@
           <img
             class="logo"
             src="/images/projects/wolfy.png"
-            alt="Wolfy"
-            title="Wolfy"
+            :alt="$t('projects.wolfy.title')"
+            :title="$t('projects.wolfy.title')"
           />
           <div class="content">
-            <h3 class="title">WOLFY</h3>
-            <p>
-              Wolfy est une adaptation web du jeu populaire Loups-Garous. Je
-              fais partie de l’équipe et contribue principalement au
-              développement de l’application mobile.
-            </p>
-            <p class="stats">plus de <strong>1 300 000</strong> joueurs</p>
+            <h3 class="title">{{ $t('projects.wolfy.title') }}</h3>
+            <p>{{ $t('projects.wolfy.description') }}</p>
+            <p
+              class="stats"
+              v-html="$t('projects.wolfy.stats', { count: '2 000 000' })"
+            />
             <div class="tools">
               <icon icon="flutter" name="Flutter" />
               <icon icon="dart" name="Dart" />
@@ -73,17 +123,12 @@
           <img
             class="logo"
             src="/images/projects/bio2game.png"
-            alt="Bio2Game"
-            title="Bio2Game"
+            :alt="$t('projects.bio2game.title')"
+            :title="$t('projects.bio2game.title')"
           />
           <div class="content">
-            <h3 class="title">BIO2GAME</h3>
-            <p>
-              Bio2Game est un jeu pour challenger ses connaissances en rapport
-              avec la nature. C’est ma première mission de grande envergure en
-              tant qu’autoentrepreneur mais également ma première expérience de
-              relation client-collaborateur.
-            </p>
+            <h3 class="title">{{ $t('projects.bio2game.title') }}</h3>
+            <p>{{ $t('projects.bio2game.description') }}</p>
             <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
@@ -102,17 +147,12 @@
           <img
             class="logo"
             src="/images/projects/blagues-api.png"
-            alt="Blagues API"
-            title="Blagues API"
+            :alt="$t('projects.blagues-api.title')"
+            :title="$t('projects.blagues-api.title')"
           />
           <div class="content">
-            <h3 class="title">BLAGUES-API</h3>
-            <p>
-              Blagues API est une api française et communautaire qui regroupe
-              plus de 300 blagues catégorisées et disponibles gratuitement par
-              token authentification Bearer. Crée dans le but d’alimenter la
-              fonctionnalité de blagues de DraftBot
-            </p>
+            <h3 class="title">{{ $t('projects.blagues-api.title') }}</h3>
+            <p>{{ $t('projects.blagues-api.description') }}</p>
             <div class="tools">
               <icon icon="nodejs" name="Node.Js" />
               <icon icon="expressjs" name="Express.Js" />
@@ -127,7 +167,7 @@
             </div>
           </div>
         </a>
-        <div class="item">
+        <!-- <div class="item">
           <img
             class="logo"
             src="/images/projects/providence-maths.png"
@@ -178,7 +218,7 @@
               <icon icon="photoshop" name="Photoshop" />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -199,6 +239,7 @@ export default {
     }
   },
   async mounted() {
+    console.log(this.$i18n)
     const stats = await this.$axios
       .$get('https://api.draftbot.fr/base/stats')
       .catch(() => null)
@@ -211,11 +252,17 @@ export default {
   },
   head() {
     return meta.get({
-      name: 'Experiences',
-      description:
-        'Mon travail vous intéresse ? Dans ce Portfolio vous pourrez retrouver mes plus gros projets !',
-      slug: 'experiences',
+      title: this.$t('raw_title'),
+      name: this.$t('title'),
+      description: this.$t('description'),
+      slug: this.$i18n.locale === 'fr' ? 'experiences' : 'ervaring',
     })
+  },
+  nuxtI18n: {
+    paths: {
+      fr: '/experiences',
+      nl: '/ervaring',
+    },
   },
 }
 </script>
