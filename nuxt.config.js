@@ -257,6 +257,9 @@ export default {
 
     // Doc: https://github.com/nuxt-community/redirect-module
     '@nuxtjs/redirect-module',
+
+    // Doc: https://github.com/nuxt-community/nuxt-i18n
+    'nuxt-i18n',
   ],
 
   /*
@@ -264,6 +267,36 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  i18n: {
+    locales: [
+      {
+        code: 'nl',
+        domain: 'www.draftman.nl',
+        iso: 'nl-NL',
+        name: 'Nederlands',
+      },
+      {
+        code: 'fr',
+        domain: 'www.draftman.fr',
+        iso: 'fr-FR',
+        name: 'Français',
+      },
+    ],
+    defaultLocale: 'fr',
+    baseUrl: 'https://www.draftman.fr',
+    strategy:
+      process.env.NODE_ENV === 'production'
+        ? 'no_prefix'
+        : 'prefix_except_default',
+    vueI18nLoader: true,
+    vueI18n: {
+      fallbackLocale: 'fr',
+    },
+    detectBrowserLanguage: false,
+    seo: false,
+    differentDomains: process.env.NODE_ENV === 'production',
+  },
 
   /*
    ** Auth module configuration
