@@ -72,16 +72,16 @@
     <div id="copyright">
       <section>Copyright 2016 - 2021 &copy; - All rights reserved</section>
       <div class="languages">
-        <nuxt-link
+        <a
           :class="{ active: $i18n.locale === 'fr' }"
-          :to="switchLocalePath('fr')"
-          >FR</nuxt-link
+          :href="switchLocalePath('fr')"
+          >FR</a
         >
         /
-        <nuxt-link
+        <a
           :class="{ active: $i18n.locale === 'nl' }"
-          :to="switchLocalePath('nl')"
-          >NL</nuxt-link
+          :href="switchLocalePath('nl')"
+          >NL</a
         >
       </div>
     </div>
