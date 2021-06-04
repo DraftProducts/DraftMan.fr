@@ -70,7 +70,7 @@
       </div>
     </div>
     <div id="copyright">
-      <section>Copyright 2016 - 2020 &copy; - All rights reserved</section>
+      <section>Copyright 2016 - 2021 &copy; - All rights reserved</section>
       <div class="languages">
         <nuxt-link
           :class="{ active: $i18n.locale === 'fr' }"
