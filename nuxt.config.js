@@ -283,12 +283,8 @@ export default {
         name: 'Français',
       },
     ],
-    defaultLocale: 'fr',
     baseUrl: 'https://www.draftman.fr',
-    strategy:
-      process.env.NODE_ENV === 'production'
-        ? 'no_prefix'
-        : 'prefix_except_default',
+    strategy: 'prefix_except_default',
     vueI18nLoader: true,
     vueI18n: {
       fallbackLocale: 'fr',
